@@ -253,7 +253,7 @@ MonoBehaviour:
   - name: Blue Balloon
     sprite: {fileID: 21300000, guid: a8d186b8ed680084b8312f4508bc115a, type: 3}
     score: 1
-  balloonPrefab: {fileID: 3691343847436935557, guid: 917692b87cbf3d14296fcbf41401ed7b, type: 3}
+  balloonPrefab: {fileID: 7303337785532354320, guid: a85a0d16005767742a4a014b4f128581, type: 3}
   spawnInterval: 1
   minX: -6
   maxX: 6

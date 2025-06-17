@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Balloon : MonoBehaviour
 {
@@ -15,6 +14,6 @@ public class Balloon : MonoBehaviour
     private void OnMouseDown()
     {
         ScoreManager.Instance.AddScore(scoreValue);
-        Destroy(gameObject); // Patlama efekti ekleyeceksen önce Instantiate()
+        Destroy(gameObject); // Ýleride particle efekt burada
     }
 }
