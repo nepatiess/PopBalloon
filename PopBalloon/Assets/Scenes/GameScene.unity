@@ -243,8 +243,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade0a1389c75cde4585dee8062006833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  balloonTypes:
+  - name: Black Balloon
+    sprite: {fileID: 21300000, guid: 11d9bc6e197893447be49962fb78ffad, type: 3}
+    score: -2
+  - name: Green Balloon
+    sprite: {fileID: 21300000, guid: 53849c546c67ada4cbcd9c3ff1e57456, type: 3}
+    score: 5
+  - name: Blue Balloon
+    sprite: {fileID: 21300000, guid: a8d186b8ed680084b8312f4508bc115a, type: 3}
+    score: 1
   balloonPrefab: {fileID: 3691343847436935557, guid: 917692b87cbf3d14296fcbf41401ed7b, type: 3}
-  spawnTime: 1.5
+  spawnInterval: 1
   minX: -6
   maxX: 6
   spawnY: -5
