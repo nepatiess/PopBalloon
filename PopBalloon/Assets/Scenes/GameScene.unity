@@ -479,12 +479,15 @@ MonoBehaviour:
   - name: Black Balloon
     prefab: {fileID: 7303337785532354320, guid: a85a0d16005767742a4a014b4f128581, type: 3}
     score: -2
+    popEffectPrefab: {fileID: 2461737249809118989, guid: 1e73a63e5eb17444ea086a374fd69b04, type: 3}
   - name: Green Balloon
     prefab: {fileID: 4552091354339854800, guid: 1978eecc224bfbf4f96f0aca6686c597, type: 3}
     score: 5
+    popEffectPrefab: {fileID: 2461737249809118989, guid: 1e73a63e5eb17444ea086a374fd69b04, type: 3}
   - name: Blue Balloon
     prefab: {fileID: 1039225802773012087, guid: 199320b0af070ca4da867eac89cf4618, type: 3}
     score: 1
+    popEffectPrefab: {fileID: 2461737249809118989, guid: 1e73a63e5eb17444ea086a374fd69b04, type: 3}
   spawnInterval: 1
   minX: -6
   maxX: 6
