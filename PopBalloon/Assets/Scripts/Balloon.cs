@@ -14,6 +14,6 @@ public class Balloon : MonoBehaviour
     private void OnMouseDown()
     {
         ScoreManager.Instance.AddScore(scoreValue);
-        Destroy(gameObject); // Ýleride particle efekt burada
+        Destroy(gameObject); // Patlama animasyonu burada tetiklenebilir
     }
 }

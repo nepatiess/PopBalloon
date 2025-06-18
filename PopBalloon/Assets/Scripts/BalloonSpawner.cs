@@ -7,13 +7,12 @@ public class BalloonSpawner : MonoBehaviour
     [System.Serializable]
     public class BalloonType
     {
-        public string name; // örn: "Mavi"
-        public Sprite sprite; // o balonun görseli
-        public int score; // patlatýlýnca verilen puan
+        public string name;          // "blue", "green", "black"
+        public GameObject prefab;    // o renge ait prefab (sprite + animator dahil)
+        public int score;            // patlatýldýðýnda verilen puan
     }
 
-    public List<BalloonType> balloonTypes; // Inspector'dan tanýmlanacak
-    public GameObject balloonPrefab;
+    public List<BalloonType> balloonTypes;
     public float spawnInterval = 1f;
     public float minX = -7f;
     public float maxX = 7f;
@@ -38,18 +37,10 @@ public class BalloonSpawner : MonoBehaviour
         float randomX = Random.Range(minX, maxX);
         Vector3 spawnPos = new Vector3(randomX, spawnY, 0f);
 
-        GameObject newBalloon = Instantiate(balloonPrefab, spawnPos, Quaternion.identity);
-
-        // Rastgele bir balon türü seç
         int randomIndex = Random.Range(0, balloonTypes.Count);
         BalloonType selectedType = balloonTypes[randomIndex];
 
-        // Sprite'ý ve skor bilgilerini aktar
-        SpriteRenderer sr = newBalloon.GetComponent<SpriteRenderer>();
-        if (sr != null)
-        {
-            sr.sprite = selectedType.sprite;
-        }
+        GameObject newBalloon = Instantiate(selectedType.prefab, spawnPos, Quaternion.identity);
 
         Balloon balloonScript = newBalloon.GetComponent<Balloon>();
         if (balloonScript != null)
