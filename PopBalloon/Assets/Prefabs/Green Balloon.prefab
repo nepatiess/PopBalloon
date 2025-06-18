@@ -100,9 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b684afdfddf3f384989ce8c8256e8bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 4
   scoreValue: 5
   colorName: green
+  popEffectPrefab: {fileID: 2461737249809118989, guid: 1e73a63e5eb17444ea086a374fd69b04, type: 3}
 --- !u!95 &-7897117936082513992
 Animator:
   serializedVersion: 5

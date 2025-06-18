@@ -7,9 +7,12 @@ public class BalloonSpawner : MonoBehaviour
     [System.Serializable]
     public class BalloonType
     {
-        public string name;          // "blue", "green", "black"
-        public GameObject prefab;    // o renge ait prefab (sprite + animator dahil)
-        public int score;            // patlatýldýðýnda verilen puan
+        public string name;
+        public GameObject prefab;
+        public int score;
+        public GameObject popEffectPrefab; // buraya prefab atanacak
+        
+
     }
 
     public List<BalloonType> balloonTypes;
@@ -34,6 +37,12 @@ public class BalloonSpawner : MonoBehaviour
 
     void SpawnBalloon()
     {
+        if (balloonTypes.Count == 0)
+        {
+            Debug.LogWarning("Balon türü listesi boþ!");
+            return;
+        }
+
         float randomX = Random.Range(minX, maxX);
         Vector3 spawnPos = new Vector3(randomX, spawnY, 0f);
 
@@ -45,8 +54,8 @@ public class BalloonSpawner : MonoBehaviour
         Balloon balloonScript = newBalloon.GetComponent<Balloon>();
         if (balloonScript != null)
         {
-            balloonScript.scoreValue = selectedType.score;
-            balloonScript.colorName = selectedType.name;
+            // Ýþte burasý: setup ile tüm bilgileri gönderiyoruz
+            balloonScript.Setup(selectedType.score, selectedType.name, selectedType.popEffectPrefab);
         }
     }
 }
