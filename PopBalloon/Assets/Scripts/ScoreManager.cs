@@ -1,20 +1,33 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager Instance;
-    public int score = 0;
-    public Text scoreText;
+    public static ScoreManager instance;
 
-    void Awake()
+    public int score = 0;
+    public TMP_Text scoreText; // Bu alan dolu olmalý!
+
+    private void Awake()
     {
-        Instance = this;
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
     }
 
-    public void AddScore(int amount)
+    public void UpdateScore(int value)
     {
-        score += amount;
-        scoreText.text = "Score: " + score;
+        score += value;
+        Debug.Log("Yeni skor: " + score); // Bakalým çalýþýyor mu
+
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + score;
+        }
+        else
+        {
+            Debug.LogWarning("scoreText baðlý deðil!");
+        }
     }
 }

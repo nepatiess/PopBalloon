@@ -11,9 +11,8 @@ public class Balloon : MonoBehaviour
         transform.Translate(Vector3.up * speed * Time.deltaTime);
     }
 
-    private void OnMouseDown()
+    public void Pop()
     {
-        ScoreManager.Instance.AddScore(scoreValue);
-        Destroy(gameObject); // Patlama animasyonu burada tetiklenebilir
+        Destroy(gameObject);
     }
 }

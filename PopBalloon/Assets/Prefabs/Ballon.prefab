@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 8663278451661728236}
   - component: {fileID: 4406044187165250019}
-  - component: {fileID: 4149278541629842574}
   - component: {fileID: 2090434938702879242}
   - component: {fileID: 7103670647799232736}
+  - component: {fileID: 5603155558751053409}
+  - component: {fileID: -3324751974928505113}
   m_Layer: 0
   m_Name: Ballon
-  m_TagString: Untagged
+  m_TagString: Black Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,9 +74,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1836207171
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 11d9bc6e197893447be49962fb78ffad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -87,8 +88,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &4149278541629842574
-EdgeCollider2D:
+--- !u!114 &2090434938702879242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7303337785532354320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b684afdfddf3f384989ce8c8256e8bba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  scoreValue: -2
+  colorName: black
+--- !u!95 &7103670647799232736
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7303337785532354320}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 86b753bd630ef294db827fa14f7b3a1f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5603155558751053409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7303337785532354320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0483c16bbc6438b44ad1e067937174f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &-3324751974928505113
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,62 +168,6 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.43447888, y: -1.0635905}
-  - {x: -0.38676, y: -0.66042304}
-  - {x: -0.6007836, y: -0.36183476}
-  - {x: -1.6971278, y: 1.5411946}
-  - {x: -1.7143701, y: 2.6409502}
-  - {x: -1.502327, y: 3.1628833}
-  - {x: -0.5832106, y: 3.6625807}
-  - {x: 0.55619186, y: 3.6629615}
-  - {x: 1.0776641, y: 3.4244409}
-  - {x: 1.5469706, y: 3.1416464}
-  - {x: 1.7250184, y: 2.642319}
-  - {x: 1.7057033, y: 1.508713}
-  - {x: 0.708907, y: -0.39621174}
-  - {x: 0.35102475, y: -0.6062091}
-  - {x: 0.4387946, y: -1.038419}
-  - {x: -0.433187, y: -1.0635906}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
---- !u!114 &2090434938702879242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7303337785532354320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b684afdfddf3f384989ce8c8256e8bba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  scoreValue: -2
-  colorName: Black Balloon
---- !u!95 &7103670647799232736
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7303337785532354320}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 86b753bd630ef294db827fa14f7b3a1f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_Offset: {x: 0, y: 1.5309421}
+  m_Size: {x: 3.3599997, y: 4.138115}
+  m_Direction: 0
