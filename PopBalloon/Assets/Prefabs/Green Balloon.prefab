@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3415070473925671290}
   m_Layer: 3
   m_Name: Green Balloon
-  m_TagString: Green Balloon
+  m_TagString: GreenBalloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

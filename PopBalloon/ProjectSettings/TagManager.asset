@@ -7,9 +7,6 @@ TagManager:
   - BlackBalloon
   - BlueBalloon
   - GreenBalloon
-  - Black Balloon
-  - Blue Balloon
-  - Green Balloon
   layers:
   - Default
   - TransparentFX

@@ -1,15 +1,18 @@
 using UnityEngine;
-using TMPro;
+using TMPro; // TMP_Text kullanmak için
+using UnityEngine.SceneManagement;
+
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
 
     public int score = 0;
-    public TMP_Text scoreText; // Bu alan dolu olmalý!
+    public TMP_Text scoreText; // Bunu UI'dan baðlaman lazým
 
-    private void Awake()
+    void Awake()
     {
+        // Singleton
         if (instance == null)
             instance = this;
         else
@@ -19,15 +22,25 @@ public class ScoreManager : MonoBehaviour
     public void UpdateScore(int value)
     {
         score += value;
-        Debug.Log("Yeni skor: " + score); // Bakalým çalýþýyor mu
+        Debug.Log("Yeni skor: " + score); // UI yazmasa bile burada görünür
 
         if (scoreText != null)
-        {
-            scoreText.text = "Score: " + score;
-        }
+            scoreText.text = score.ToString();
         else
-        {
             Debug.LogWarning("scoreText baðlý deðil!");
+
+        // Oyun sonu kontrolü
+        if (score >= 50 || score < 0)
+        {
+            GameOver();
         }
     }
+
+    private void GameOver()
+    {
+        Debug.Log("Oyun bitti! GameOver sahnesine geçiliyor...");
+        // Burada GameOver sahnesinin adýný yaz, örnek: "GameOver"
+        SceneManager.LoadScene("GameOver");
+    }
+
 }
