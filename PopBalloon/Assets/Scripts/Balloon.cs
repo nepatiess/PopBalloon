@@ -6,12 +6,20 @@ public class Balloon : MonoBehaviour
 
     private int scoreValue;
     private string colorName;
+    private bool isPopped = false;
+
+    private Animator animator; // Deðiþti: SerializeField deðil, dinamik
 
     [SerializeField] private GameObject popEffectPrefab;
 
-    void Update()
+    void Awake()
     {
-        transform.Translate(Vector3.up * speed * Time.deltaTime);
+        animator = GetComponent<Animator>();
+
+        if (animator == null)
+        {
+            Debug.LogError($"[BALON] Animator bulunamadý! {gameObject.name} prefab’ýnda Animator yok!");
+        }
     }
 
     public void Setup(int score, string name, GameObject effect)
@@ -21,29 +29,43 @@ public class Balloon : MonoBehaviour
         popEffectPrefab = effect;
     }
 
+    void Update()
+    {
+        if (!isPopped)
+        {
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
+        }
+    }
+
     private void OnMouseDown()
     {
+        if (isPopped) return;
+
+        isPopped = true;
         Debug.Log($"[BALON] Patlatýldý: {colorName} | Skor: {scoreValue}");
 
         ScoreManager.instance.UpdateScore(scoreValue);
-        PlayPopEffect();
-        Destroy(gameObject);
-    }
 
-    void PlayPopEffect()
-    {
         if (popEffectPrefab != null)
         {
-            GameObject effect = Instantiate(popEffectPrefab, transform.position, Quaternion.identity);
-            Debug.Log($"[PARTICLE] Pop efekti çalýþtý: {popEffectPrefab.name} | Pozisyon: {transform.position}");
+            Instantiate(popEffectPrefab, transform.position, Quaternion.identity);
+            Debug.Log($"[PARTICLE] Efekt oynatýldý: {popEffectPrefab.name}");
+        }
 
-            // Particle System bileþeni var mý kontrol edelim
-            if (effect.GetComponent<ParticleSystem>() == null)
-                Debug.LogWarning($"[PARTICLE] Uyarý: {popEffectPrefab.name} prefab'ýnda Particle System yok!");
+        if (animator != null)
+        {
+            animator.SetTrigger("pop");
         }
         else
         {
-            Debug.LogWarning("[PARTICLE] Efekt prefab atanmadý, efekt oynatýlamadý.");
+            Destroy(gameObject); // Animasyon oynatacak bir þey yoksa direkt sil
         }
     }
+
+    public void OnPopAnimationEnd()
+    {
+        Debug.LogWarning(" OnPopAnimationEnd() ÇALIÞTI!");
+        Destroy(gameObject);
+    }
+
 }

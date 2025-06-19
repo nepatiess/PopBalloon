@@ -11,7 +11,7 @@ public class BalloonSpawner : MonoBehaviour
         public GameObject prefab;
         public int score;
         public GameObject popEffectPrefab; // buraya prefab atanacak
-        
+
 
     }
 
@@ -56,6 +56,7 @@ public class BalloonSpawner : MonoBehaviour
         {
             // Ýþte burasý: setup ile tüm bilgileri gönderiyoruz
             balloonScript.Setup(selectedType.score, selectedType.name, selectedType.popEffectPrefab);
+
         }
     }
 }
