@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7469828402917650231}
   - component: {fileID: 7911651750136885696}
   - component: {fileID: -7897117936082513992}
-  - component: {fileID: -9004282013298810960}
   - component: {fileID: 3415070473925671290}
   m_Layer: 3
   m_Name: Green Balloon
@@ -101,8 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  scoreValue: 5
-  colorName: green
   popEffectPrefab: {fileID: 2461737249809118989, guid: 1e73a63e5eb17444ea086a374fd69b04, type: 3}
 --- !u!95 &-7897117936082513992
 Animator:
@@ -125,18 +122,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-9004282013298810960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4552091354339854800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0483c16bbc6438b44ad1e067937174f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!70 &3415070473925671290
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

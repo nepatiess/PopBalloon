@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3738428266727204766}
   - component: {fileID: 1057916585251491547}
   - component: {fileID: -4027630507130080465}
-  - component: {fileID: -2492582626403015692}
   - component: {fileID: -5461676338879535934}
   m_Layer: 3
   m_Name: Blue Balloon
@@ -101,8 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  scoreValue: 1
-  colorName: blue
   popEffectPrefab: {fileID: 2461737249809118989, guid: 1e73a63e5eb17444ea086a374fd69b04, type: 3}
 --- !u!95 &-4027630507130080465
 Animator:
@@ -125,18 +122,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-2492582626403015692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1039225802773012087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0483c16bbc6438b44ad1e067937174f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!70 &-5461676338879535934
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
