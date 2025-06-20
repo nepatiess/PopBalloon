@@ -11,6 +11,8 @@ public class GameOverManager : MonoBehaviour
 
     void Start()
     {
+        MusicManager.instance.StopAllMusic();
+
         int lastScore = PlayerPrefs.GetInt("LastScore", 0);
         int highScore = PlayerPrefs.GetInt("HighScore", 0);
         int blue = PlayerPrefs.GetInt("BlueCount", 0);

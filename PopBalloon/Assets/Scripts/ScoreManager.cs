@@ -19,6 +19,12 @@ public class ScoreManager : MonoBehaviour
     // high score 
     private int highScore = 0;
 
+    void Start()
+    {
+        MusicManager.instance.PlayGameMusic();
+    }
+
+
 
     void Awake()
     {

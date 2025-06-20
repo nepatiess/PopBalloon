@@ -1,11 +1,17 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenuButtons : MonoBehaviour
 {
+    void Start()
+{
+    MusicManager.instance.PlayMenuMusic();
+}
+
+
     public void PlayGame()
     {
-        SceneManager.LoadScene("GameScene"); // kendi sahne adýný yaz
+        SceneManager.LoadScene("GameScene"); // kendi sahne adÄ±nÄ± yaz
     }
 
     public void ExitGame()

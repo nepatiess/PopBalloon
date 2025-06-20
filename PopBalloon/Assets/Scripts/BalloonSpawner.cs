@@ -24,6 +24,7 @@ public class BalloonSpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnBalloons());
+
     }
 
     IEnumerator SpawnBalloons()
