@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro; // TMP_Text kullanmak için
+using TMPro;
 using UnityEngine.SceneManagement;
 
 
@@ -8,7 +8,7 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
 
     public int score = 0;
-    public TMP_Text scoreText; // Bunu UI'dan baðlaman lazým
+    public TMP_Text scoreText;
 
     // kaç tane balon vurduk onun sayýsý
     public int blueBalloonCount = 0;
@@ -31,14 +31,11 @@ public class ScoreManager : MonoBehaviour
     public void UpdateScore(int value)
     {
         score += value;
-        Debug.Log("Yeni skor: " + score); // UI yazmasa bile burada görünür
 
         if (scoreText != null)
             scoreText.text = score.ToString();
-        else
-            Debug.LogWarning("scoreText baðlý deðil!");
-
-        // Oyun sonu kontrolü
+        
+        // 0>x or x>50
         if (score >= 50 || score < 0)
         {
             GameOver();
@@ -47,22 +44,20 @@ public class ScoreManager : MonoBehaviour
 
     private void GameOver()
     {
-        Debug.Log("Oyun bitti! GameOver sahnesine geçiliyor...");
-
-        // En yüksek skoru güncelle
+        // en yüksek skoru güncelle
         int highScore = PlayerPrefs.GetInt("HighScore", 0);
         if (score > highScore)
         {
             PlayerPrefs.SetInt("HighScore", score);
         }
 
-        // Mevcut skor ve balon sayýlarýný kaydet
+        // mevcut skor ve balon sayýlarýný kaydet
         PlayerPrefs.SetInt("LastScore", score);
         PlayerPrefs.SetInt("BlueCount", blueBalloonCount);
         PlayerPrefs.SetInt("GreenCount", greenBalloonCount);
         PlayerPrefs.SetInt("BlackCount", blackBalloonCount);
 
-        PlayerPrefs.Save(); // BU SATIR ÇOK ÖNEMLÝ!
+        PlayerPrefs.Save();
 
         SceneManager.LoadScene("GameOver");
     }

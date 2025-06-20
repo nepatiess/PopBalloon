@@ -10,15 +10,15 @@ public class BalloonSpawner : MonoBehaviour
         public string name;
         public GameObject prefab;
         public int score;
-        public GameObject popEffectPrefab; // buraya prefab atanacak
-
-
+        public GameObject popEffectPrefab;
     }
 
     public List<BalloonType> balloonTypes;
     public float spawnInterval = 1f;
+    // -7 +7 arasý oluþcak.
     public float minX = -7f;
     public float maxX = 7f;
+    // y ekseni -5ten oluþuyolar
     public float spawnY = -5f;
 
     void Start()
@@ -40,7 +40,6 @@ public class BalloonSpawner : MonoBehaviour
     {
         if (balloonTypes.Count == 0)
         {
-            Debug.LogWarning("Balon türü listesi boþ!");
             return;
         }
 
@@ -55,7 +54,6 @@ public class BalloonSpawner : MonoBehaviour
         Balloon balloonScript = newBalloon.GetComponent<Balloon>();
         if (balloonScript != null)
         {
-            // Ýþte burasý: setup ile tüm bilgileri gönderiyoruz
             balloonScript.Setup(selectedType.score, selectedType.name, selectedType.popEffectPrefab);
 
         }

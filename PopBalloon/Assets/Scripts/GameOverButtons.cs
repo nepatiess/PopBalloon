@@ -5,11 +5,11 @@ public class GameOverButtons : MonoBehaviour
 {
     public void RestartGame()
     {
-        SceneManager.LoadScene("GameScene"); // kendi sahne adýný yaz
+        SceneManager.LoadScene("GameScene"); 
     }
 
     public void GoToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu"); // ana menü sahnenin adýný yaz
+        SceneManager.LoadScene("MainMenu"); 
     }
 }

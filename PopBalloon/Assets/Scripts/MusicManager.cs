@@ -13,8 +13,8 @@ public class MusicManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Sahne geçince kaybolmasın
-            SceneManager.sceneLoaded += OnSceneLoaded; // BU ÇOK ÖNEMLİ ✅
+            DontDestroyOnLoad(gameObject); // sahne geçince kaybolmasın
+            SceneManager.sceneLoaded += OnSceneLoaded; 
         }
         else
         {
@@ -34,7 +34,6 @@ public class MusicManager : MonoBehaviour
         if (menuMusic != null)
         {
             menuMusic.Play();
-            Debug.Log("[MusicManager] Menu müziği başladı.");
         }
     }
 
@@ -44,7 +43,6 @@ public class MusicManager : MonoBehaviour
         if (gameMusic != null)
         {
             gameMusic.Play();
-            Debug.Log("[MusicManager] Game müziği başladı: " + gameMusic.clip.name);
         }
     }
 
@@ -56,7 +54,6 @@ public class MusicManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log($"[MusicManager] Sahne yüklendi: {scene.name}");
 
         if (scene.name == "MainMenu")
         {

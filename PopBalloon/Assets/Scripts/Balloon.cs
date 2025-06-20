@@ -21,22 +21,13 @@ public class Balloon : MonoBehaviour
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
 
-        if (animator == null)
-        {
-            Debug.LogError($"[BALON] Animator bulunamadý! {gameObject.name} prefab’ýnda Animator yok!");
-        }
-
-        if (audioSource == null)
-        {
-            Debug.LogWarning($"[BALON] AudioSource yok! {gameObject.name} prefab'ýna AudioSource eklemelisin.");
-        }
     }
 
 
     public void Setup(int score, string name, GameObject effect)
     {
         scoreValue = score;
-        colorName = name.ToLower(); // küçük harfe çevir, karþýlaþtýrma kolay olsun
+        colorName = name.ToLower();
         popEffectPrefab = effect;
     }
 
@@ -53,13 +44,10 @@ public class Balloon : MonoBehaviour
         if (isPopped) return;
         isPopped = true;
 
-        Debug.Log($"[BALON] Patlatýldý: {colorName} | Skor: {scoreValue}");
-
-        // Skor güncellemesi
+        // score updatei
         ScoreManager.instance.UpdateScore(scoreValue);
 
-        // Balon rengine göre sayaç artýr
-        // Balonun tag'ine göre sayaç artýr
+        // balon tagine göre oyun sonu balon sayýsý artýrýlýyor
         if (CompareTag("BlueBalloon"))
         {
             ScoreManager.instance.blueBalloonCount++;
@@ -72,30 +60,25 @@ public class Balloon : MonoBehaviour
         {
             ScoreManager.instance.blackBalloonCount++;
         }
-        else
-        {
-            Debug.LogWarning($"[BALON] Tanýmsýz tag: {gameObject.tag}");
-        }
 
 
-        // Efekt varsa patlat
         if (popEffectPrefab != null)
         {
             Instantiate(popEffectPrefab, transform.position, Quaternion.identity);
-            Debug.Log($"[PARTICLE] Efekt oynatýldý: {popEffectPrefab.name}");
+            
         }
 
-        // Animasyon varsa baþlat
+        // anim baþlat
         if (animator != null)
         {
             animator.SetTrigger("pop");
         }
         else
         {
-            Destroy(gameObject); // Animasyon yoksa doðrudan sil
+            Destroy(gameObject); // anim yoksa direkt sil
         }
 
-        // Ses efekti çal
+        // ses efekti
         if (popSound != null && audioSource != null)
         {
             audioSource.PlayOneShot(popSound);
@@ -103,10 +86,9 @@ public class Balloon : MonoBehaviour
 
     }
 
-    // Animasyonun sonunda çaðrýlacak
+    // anim sonu
     public void OnPopAnimationEnd()
     {
-        Debug.LogWarning("OnPopAnimationEnd() ÇALIÞTI!");
         Destroy(gameObject);
     }
 }
