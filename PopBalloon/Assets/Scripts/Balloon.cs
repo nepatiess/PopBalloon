@@ -11,15 +11,27 @@ public class Balloon : MonoBehaviour
     private Animator animator;
     [SerializeField] private GameObject popEffectPrefab;
 
+
+    [SerializeField] private AudioClip popSound;
+    private AudioSource audioSource;
+
+
     void Awake()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         if (animator == null)
         {
             Debug.LogError($"[BALON] Animator bulunamadý! {gameObject.name} prefab’ýnda Animator yok!");
         }
+
+        if (audioSource == null)
+        {
+            Debug.LogWarning($"[BALON] AudioSource yok! {gameObject.name} prefab'ýna AudioSource eklemelisin.");
+        }
     }
+
 
     public void Setup(int score, string name, GameObject effect)
     {
@@ -82,6 +94,13 @@ public class Balloon : MonoBehaviour
         {
             Destroy(gameObject); // Animasyon yoksa doðrudan sil
         }
+
+        // Ses efekti çal
+        if (popSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(popSound);
+        }
+
     }
 
     // Animasyonun sonunda çaðrýlacak

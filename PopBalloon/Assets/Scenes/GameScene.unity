@@ -612,6 +612,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   scoreText: {fileID: 2074403811}
+  blueBalloonCount: 0
+  greenBalloonCount: 0
+  blackBalloonCount: 0
 --- !u!4 &1165915545
 Transform:
   m_ObjectHideFlags: 0
