@@ -3,15 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuButtons : MonoBehaviour
 {
-    void Start()
-{
-    MusicManager.instance.PlayMenuMusic();
-}
-
-
     public void PlayGame()
     {
-        SceneManager.LoadScene("GameScene"); // kendi sahne adını yaz
+        MusicManager.instance.StopAllMusic(); // garanti sessiz başla la
+        SceneManager.LoadScene("GameScene");
     }
 
     public void ExitGame()
