@@ -44,10 +44,10 @@ public class Balloon : MonoBehaviour
         if (isPopped) return;
         isPopped = true;
 
-        // score updatei
+        // score update
         ScoreManager.instance.UpdateScore(scoreValue);
 
-        // balon tagine göre oyun sonu balon sayýsý artýrýlýyor
+        // count the ballons
         if (CompareTag("BlueBalloon"))
         {
             ScoreManager.instance.blueBalloonCount++;
@@ -68,17 +68,17 @@ public class Balloon : MonoBehaviour
             
         }
 
-        // anim baþlat
+        // start anim
         if (animator != null)
         {
             animator.SetTrigger("pop");
         }
         else
         {
-            Destroy(gameObject); // anim yoksa direkt sil
+            Destroy(gameObject); // if there is no anim,delete
         }
 
-        // ses efekti
+        // sound effect
         if (popSound != null && audioSource != null)
         {
             audioSource.PlayOneShot(popSound);
@@ -86,7 +86,7 @@ public class Balloon : MonoBehaviour
 
     }
 
-    // anim sonu
+    // the end of anim
     public void OnPopAnimationEnd()
     {
         Destroy(gameObject);

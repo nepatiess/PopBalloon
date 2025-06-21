@@ -5,12 +5,12 @@ public class MainMenuButtons : MonoBehaviour
 {
     public void PlayGame()
     {
-        MusicManager.instance.StopAllMusic(); // garanti sessiz başla la
+        MusicManager.instance.StopAllMusic(); // afresh quite
         SceneManager.LoadScene("GameScene");
     }
 
     public void ExitGame()
     {
-        Application.Quit();
+        Application.Quit(); // quit func
     }
 }

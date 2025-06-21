@@ -15,10 +15,12 @@ public class BalloonSpawner : MonoBehaviour
 
     public List<BalloonType> balloonTypes;
     public float spawnInterval = 1f;
-    // -7 +7 arasý oluþcak.
+
+    // -7 +7 between
     public float minX = -7f;
     public float maxX = 7f;
-    // y ekseni -5ten oluþuyolar
+
+    // spawn of the y axis
     public float spawnY = -5f;
 
     void Start()

@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour
     public int score = 0;
     public TMP_Text scoreText;
 
-    // kaç tane balon vurduk onun sayýsý
+    // the nums of ballons pop
     public int blueBalloonCount = 0;
     public int greenBalloonCount = 0;
     public int blackBalloonCount = 0;
@@ -21,7 +21,7 @@ public class ScoreManager : MonoBehaviour
 
     void Awake()
     {
-        // Singleton
+        // Singleton (?)
         if (instance == null)
             instance = this;
         else
@@ -44,14 +44,14 @@ public class ScoreManager : MonoBehaviour
 
     private void GameOver()
     {
-        // en yüksek skoru güncelle
+        // high score
         int highScore = PlayerPrefs.GetInt("HighScore", 0);
         if (score > highScore)
         {
             PlayerPrefs.SetInt("HighScore", score);
         }
 
-        // mevcut skor ve balon sayýlarýný kaydet
+        // save last score and ballons
         PlayerPrefs.SetInt("LastScore", score);
         PlayerPrefs.SetInt("BlueCount", blueBalloonCount);
         PlayerPrefs.SetInt("GreenCount", greenBalloonCount);

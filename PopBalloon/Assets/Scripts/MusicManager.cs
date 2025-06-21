@@ -13,7 +13,7 @@ public class MusicManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // sahne geçince kaybolmasın
+            DontDestroyOnLoad(gameObject); // applies to both scenes
             SceneManager.sceneLoaded += OnSceneLoaded; 
         }
         else
@@ -39,7 +39,7 @@ public class MusicManager : MonoBehaviour
 
     public void PlayGameMusic()
     {
-        StopAllMusic();
+        StopAllMusic(); //mute and play
         if (gameMusic != null)
         {
             gameMusic.Play();
