@@ -42,10 +42,10 @@ Bu, Unity 2022.3.37f1 ile geliştirilen bir **refleks tabanlı skor oyunu**dur. 
 ## ⚙️ Teknik Detaylar
 
 ### 🎮 Kullanılan Teknolojiler
-- **Unity 2022.3.37f1**
+- **Unity 2022.3.37f1** <img src="https://media.githubusercontent.com/media/nepatiess/PopBalloon/main/PopBalloon/Assets/UI/github%20png.png" width="200" align="right"/>
 - **C# ile programlama**
 - **TextMeshPro** ile UI yönetimi
-- **PlayerPrefs** ile skor ve veri kayıt sistemi <img src="https://media.githubusercontent.com/media/nepatiess/PopBalloon/main/PopBalloon/Assets/UI/github%20png.png" width="200" align="right"/>
+- **PlayerPrefs** ile skor ve veri kayıt sistemi 
 - **AudioSource** ile arka plan müzikleri ve ses efektleri
 - **SceneManager** ile sahne geçişleri
 - **Coroutines** ile balon üretim kontrolü
