@@ -4,6 +4,8 @@
 
 Bu, Unity 2022.3.37f1 ile geliştirilen bir **refleks tabanlı skor oyunu**dur. Oyuncu farklı renkteki balonlara tıklayarak skor kazanmaya veya kaybetmeye çalışır. Hedef, en yüksek skoru yaparak oyunu kazanmaktır!
 
+--- 
+
 ## 🎯 Oyun Özellikleri
 
 ### ✅ Oyun Akışı
@@ -33,7 +35,7 @@ Bu, Unity 2022.3.37f1 ile geliştirilen bir **refleks tabanlı skor oyunu**dur. 
   - En yüksek skoru (kayıtlı)
   - Patlatılan balon renklerinin sayısı gösterilir.
 - **Yeniden Başlat** ve **Ana Menüye Dön** seçenekleri bulunur.
-
+<img src="https://media.githubusercontent.com/media/nepatiess/PopBalloon/main/PopBalloon/Assets/UI/github%20png.png" width="200" align="right"/>
 ---
 
 ## ⚙️ Teknik Detaylar
@@ -46,7 +48,7 @@ Bu, Unity 2022.3.37f1 ile geliştirilen bir **refleks tabanlı skor oyunu**dur. 
 - **AudioSource** ile arka plan müzikleri ve ses efektleri
 - **SceneManager** ile sahne geçişleri
 - **Coroutines** ile balon üretim kontrolü
-<img src="https://media.githubusercontent.com/media/nepatiess/PopBalloon/main/PopBalloon/Assets/UI/github%20png.png" width="200" align="right"/>
+
 
 ---
 
@@ -68,15 +70,28 @@ git clone https://github.com/kullaniciadi/PopBalloon.git
 
 ```
 
+---
+
 ## 📈 Git Kuralları
 - gitignore dosyası projeye eklenmiştir (Library, Temp, obj, .vs, .csproj, .unitypackage dosyaları hariç tutulmuştur).
 - Geliştirme boyunca anlamlı commit mesajları ile kod takibi yapılmıştır.
 - Geliştirme süreci boyunca düzenli olarak GitHub'a push edilmiştir.
 
+---
+
 ## 👩‍💻 Geliştirici
 - Zeynep Koz
 - Düzce Üniversitesi - Bilgisayar Mühendisliği
 - 🎮 Unity & oyun geliştirme tutkunu
-- 📬 İletişim: LinkedIn (isteğe bağlı)
+- 📬 İletişim: <div align="left">
+  <a href="https://www.linkedin.com/in/zeynep-koz34/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=191919&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
+  </a>
+  <a href="https://discord.com/users/467302273911881740" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=191919&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="discord logo"  />
+  </a>
+  <a href="https://www.instagram.com/nepatiess/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=191919&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
+  </a>
 
 <img src="https://media.githubusercontent.com/media/nepatiess/PopBalloon/main/PopBalloon/Assets/UI/github%20banner%202.png">
