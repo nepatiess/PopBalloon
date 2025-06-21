@@ -1,4 +1,4 @@
-<img src="https://ibb.co/F4tfGSCW" >
+<img src="https://media.githubusercontent.com/media/nepatiess/PopBalloon/main/PopBalloon/Assets/UI/github%20banner%201.png" >
 
 # 🎈 Balloon Popper: Skorunu Yükselt, Balonları Patlat!
 
@@ -46,7 +46,7 @@ Bu, Unity 2022.3.37f1 ile geliştirilen bir **refleks tabanlı skor oyunu**dur. 
 - **AudioSource** ile arka plan müzikleri ve ses efektleri
 - **SceneManager** ile sahne geçişleri
 - **Coroutines** ile balon üretim kontrolü
-
+<img src="https://media.githubusercontent.com/media/nepatiess/PopBalloon/main/PopBalloon/Assets/UI/github%20png.png" width="200" align="right"/>
 
 ---
 
@@ -79,4 +79,4 @@ git clone https://github.com/kullaniciadi/PopBalloon.git
 - 🎮 Unity & oyun geliştirme tutkunu
 - 📬 İletişim: LinkedIn (isteğe bağlı)
 
-<img src="">
+<img src="https://media.githubusercontent.com/media/nepatiess/PopBalloon/main/PopBalloon/Assets/UI/github%20banner%202.png">
