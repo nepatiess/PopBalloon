@@ -35,7 +35,8 @@ Bu, Unity 2022.3.37f1 ile geliştirilen bir **refleks tabanlı skor oyunu**dur. 
   - En yüksek skoru (kayıtlı)
   - Patlatılan balon renklerinin sayısı gösterilir.
 - **Yeniden Başlat** ve **Ana Menüye Dön** seçenekleri bulunur.
-<img src="https://media.githubusercontent.com/media/nepatiess/PopBalloon/main/PopBalloon/Assets/UI/github%20png.png" width="200" align="right"/>
+
+
 ---
 
 ## ⚙️ Teknik Detaylar
@@ -44,7 +45,7 @@ Bu, Unity 2022.3.37f1 ile geliştirilen bir **refleks tabanlı skor oyunu**dur. 
 - **Unity 2022.3.37f1**
 - **C# ile programlama**
 - **TextMeshPro** ile UI yönetimi
-- **PlayerPrefs** ile skor ve veri kayıt sistemi
+- **PlayerPrefs** ile skor ve veri kayıt sistemi <img src="https://media.githubusercontent.com/media/nepatiess/PopBalloon/main/PopBalloon/Assets/UI/github%20png.png" width="200" align="right"/>
 - **AudioSource** ile arka plan müzikleri ve ses efektleri
 - **SceneManager** ile sahne geçişleri
 - **Coroutines** ile balon üretim kontrolü
@@ -83,7 +84,7 @@ git clone https://github.com/kullaniciadi/PopBalloon.git
 - Zeynep Koz
 - Düzce Üniversitesi - Bilgisayar Mühendisliği
 - 🎮 Unity & oyun geliştirme tutkunu
-- 📬 İletişim: <div align="left">
+- 📬 İletişim: <div>
   <a href="https://www.linkedin.com/in/zeynep-koz34/" target="_blank">
     <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=191919&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
   </a>
