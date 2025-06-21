@@ -1,4 +1,4 @@
-<img src="https://r.resimlink.com/OJpG5X.png" height=500 width=1920 >
+<img src="https://r.resimlink.com/OJpG5X.png" >
 
 # 🎈 Balloon Popper: Skorunu Yükselt, Balonları Patlat!
 
@@ -64,7 +64,7 @@ Bu projede:
 
 1. Bu projeyi klonla veya indir:
 ```bash
-git clone https://github.com/kullaniciadi/balloon-popper.git
+git clone https://github.com/kullaniciadi/PopBalloon.git
 
 ```
 
@@ -79,4 +79,4 @@ git clone https://github.com/kullaniciadi/balloon-popper.git
 - 🎮 Unity & oyun geliştirme tutkunu
 - 📬 İletişim: LinkedIn (isteğe bağlı)
 
-<img src="https://raw.githubusercontent.com/nepatiess/Fruit-Pick-nic/refs/heads/main/photos/banner.png">
+<img src="">
