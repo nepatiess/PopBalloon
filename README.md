@@ -1,4 +1,4 @@
-<img src="https://r.resimlink.com/OJpG5X.png" >
+<img src="https://ibb.co/F4tfGSCW" >
 
 # 🎈 Balloon Popper: Skorunu Yükselt, Balonları Patlat!
 
