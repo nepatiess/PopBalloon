@@ -16,8 +16,6 @@ Bu, Unity 2022.3.37f1 ile geliştirilen bir **refleks tabanlı skor oyunu**dur. 
   - 🟦 Mavi: +1 puan
   - 🟩 Yeşil: +5 puan
   - ⬛ Siyah: -2 puan
-- Mavi ve Yeşil balonlar, **ekranın üstüne ulaşırsa da puan kazandırır.**
-- Skor **50'ye ulaşırsa** ya da **0’ın altına düşerse** oyun sona erer.
 
 ### 🎨 Balon Sistemi
 - Balonlar `BalloonType` sınıfı ile tanımlanır ve Scriptable yapı mantığına benzer şekilde dinamik olarak yönetilir.
