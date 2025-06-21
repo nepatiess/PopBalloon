@@ -41,6 +41,8 @@ Bu, Unity 2022.3.37f1 ile geliştirilen bir **refleks tabanlı skor oyunu**dur. 
 
 ### 🎮 Kullanılan Teknolojiler
 - **Unity 2022.3.37f1** <img src="https://media.githubusercontent.com/media/nepatiess/PopBalloon/main/PopBalloon/Assets/UI/github%20png.png" width="200" align="right"/>
+- Pixel Studio ile balon çizimleri, animasyonları ve bazı yazılar
+- Menü ve Oyun müziği için AI music maker : https://www.udio.com
 - **C# ile programlama**
 - **TextMeshPro** ile UI yönetimi
 - **PlayerPrefs** ile skor ve veri kayıt sistemi 
@@ -55,9 +57,8 @@ Bu, Unity 2022.3.37f1 ile geliştirilen bir **refleks tabanlı skor oyunu**dur. 
 
 Bu projede:
 - **Tek bir spawner** ile birden fazla balon yönetilebilir.
-- Yeni balonlar sadece prefab ve listeye ekleme ile entegre olur (hardcoded değil).
+- Yeni balonlar sadece prefab ve listeye ekleme ile entegre olur.
 - Manager script’ler (MusicManager, ScoreManager) Singleton olarak yazılmıştır.
-- Kod yorumlarla desteklenmiş, her bir modül tek sorumluluk prensibine uygun olarak bölünmüştür.
 
 ---
 
